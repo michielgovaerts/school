@@ -84,8 +84,8 @@ table th:last-child {
 .box {
     position: relative;
     margin: 10px;
-    background-color: hsla(6, 0%, 35%, 0.40);
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+ /*   background-color: hsla(6, 0%, 35%, 0.40);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);*/
     border-radius: 20px;
     overflow: hidden;
     display: block;
@@ -283,118 +283,6 @@ p {
     color: black;
 }
 
-/*media queries*/
-
-/* regular phone*/
-
-@media all and (min-width: 720px) {
-    .navigation {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-end;
-        position: fixed;
-        width: 100%;
-        z-index: 1;
-    }
-
-    .navigation a {
-        padding: 1em;
-        border-top: none;
-        transition: 0.3s;
-    }
-
-
-    header > img {
-        position: absolute;
-    }
-
-    article > img {
-        width: 100%;
-        bottom: 200px;
-        margin-top: -100px;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    grid-container {
-        display: grid;
-        grid-template-columns: 65% 35%;
-        grid-template-rows: 3fr 6fr 4fr;
-        grid-template-areas: "welkom welkom" " special special" "openingsuren social";
-    }
-
-    .grid-obj-Welkom {
-        grid-area: welkom;
-        object-fit: contain;
-    }
-
-    .grid-obj-special {
-        grid-area: special;
-        object-fit: cover;
-    }
-
-    .grid-obj-openingsuren {
-        grid-area: openingsuren;
-        object-fit: cover;
-    }
-
-    .grid-obj-social {
-        grid-area: social;
-        display: block;
-        object-fit: cover;
-    }
-}
-
-
-/*tablet*/
-
-@media all and (min-width: 1020px) {
-
-    /*index*/
-    main {
-        grid-template-rows: 4fr 4.5fr 4fr;
-        grid-template-columns: 65% 35%;
-        grid-template-areas: "welkom welkom" "special openingsuren" "special social";
-    }
-
-    h1 {
-        font-size: 35px;
-    }
-    p {
-        font-size: 20px;
-    }
-
-    /*menu*/
-}
-
-/* desktop */
-
-@media all and (min-width: 1280px) {
-
-    /*index*/
-    .navigation {
-        justify-content: flex-end;
-    }
-
-    article > img {
-        margin-top: -100px;
-    }
-
-    /*menu*/
-}
-
-@media all and (min-width: 1920px) {
-
-    h1 {
-        font-size: 34px;
-    }
-    p {
-        font-size: 28px;
-    }
-
-}
 
 
 /**********************************about***********************************/
@@ -408,29 +296,6 @@ p {
 #logo-menu {
     width: 4%;
     padding: 0.5%;
-}
-
-
-@media all and (min-width: 720px) {
-    .grid-main {
-        display: grid;
-        grid-template-columns: 65% 35%;
-        grid-template-rows: 4fr 5fr;
-        grid-template-areas: "about about" "openingsuren social";
-    }
-
-    .grid-obj-About {
-        grid-area: about;
-        margin-top: 100px;
-    }
-
-}
-
-@media all and (min-width: 1020px) {
-    footer span {
-        font-size: 20px;
-    }
-
 }
 
 
@@ -522,32 +387,7 @@ p {
 }
 
 
-@media all and (min-width: 700px) {
-    
-    .columns {
-        width: 200%;
-    }
 
-    .icon-grid {
-        display: flex;
-        margin: 5px 0 0 0;
-        flex-direction: row;
-        justify-content: center;
-    align-items: center;
-    text-align: center;
-        margin-bottom: 5%;
-        margin-right: 20px;
-        width: 100%;
-    }
-
-    .list {
-        height: 7rem;
-    }
-
-    .icon {
-        width: 100%;
-    }
-}
 
 /* to top button */
 
@@ -596,20 +436,8 @@ p {
 }
 
 
-@media all and (min-width: 720px) {
-    .button {
-        left: 45%;
-    }
-}
 
-@media all and (min-width: 1080px) {
-    .button {
-        width: 200px;
-        font-size: 28px;
-        left: auto;
-        right: 0;
-    }
-}
+
 
 
 
@@ -677,7 +505,7 @@ input[type=submit]:hover {
 }
 
 .map {
-    height: 40vh;
+    height: inherit;
 }
 
 form > fieldset {
@@ -690,8 +518,122 @@ form {
 
 
 
+/**********************************************************media queries*************************************************************/
+
+@media all and (min-width: 700px) {
+    body .columns {
+        width: 200%;
+    }
+
+    .icon-grid {
+        display: flex;
+        margin: 5px 0 0 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 5%;
+        margin-right: 20px;
+        width: 100%;
+    }
+
+    .list {
+        height: 7rem;
+    }
+
+    body .icon {
+        max-width: 100%;
+        width: 100%;
+    }
+
+}
+
+
+/* regular phone*/
+
 @media all and (min-width: 720px) {
-    .grid-container-cont {
+     
+    
+    .navigation {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .navigation a {
+        padding: 1em;
+        border-top: none;
+        transition: 0.3s;
+    }
+
+
+    header > img {
+        position: absolute;
+    }
+
+    article > img {
+        width: 100%;
+        bottom: 200px;
+        margin-top: -100px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    grid-container {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        grid-template-rows: 3fr 6fr 4fr;
+        grid-template-areas: "welkom welkom" " special special" "openingsuren social";
+    }
+
+    .grid-obj-Welkom {
+        grid-area: welkom;
+        object-fit: contain;
+    }
+
+    .grid-obj-special {
+        grid-area: special;
+        object-fit: cover;
+    }
+
+    .grid-obj-openingsuren {
+        grid-area: openingsuren;
+        object-fit: cover;
+    }
+
+    .grid-obj-social {
+        grid-area: social;
+        display: block;
+        object-fit: cover;
+    }
+    
+    /* about page */
+    .grid-main {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        grid-template-rows: 4fr 5fr;
+        grid-template-areas: "about about" "openingsuren social";
+    }
+
+    .grid-obj-About {
+        grid-area: about;
+        margin-top: 100px;
+    }
+    
+    /* menu page */
+    
+    .button {
+        left: 45%;
+    }
+    
+    /* contact page */
+    
+     .grid-container-cont {
         padding-top: 80px;
         width: 100%;
         display: grid;
@@ -730,6 +672,7 @@ form {
 
 }
 
+
 @media all and (min-width: 880px) {
     #logo-con {
         width: 7%;
@@ -738,9 +681,61 @@ form {
         padding-bottom: 4%;
     }
 }
+    
 
+
+/*tablet*/
+
+@media all and (min-width: 1020px) {
+
+    /*index*/
+    main {
+        grid-template-rows: 4fr 4.5fr 4fr;
+        grid-template-columns: 65% 35%;
+        grid-template-areas: "welkom welkom" "special openingsuren" "special social";
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+    p {
+        font-size: 20px;
+    }
+
+    /* about */
+    footer span {
+        font-size: 20px;
+    }
+    
+    /*menu*/
+    
+    
+}
+
+@media all and (min-width: 1080px) {
+    .button {
+        width: 200px;
+        font-size: 28px;
+        left: auto;
+        right: 0;
+    }
+}
+
+/* desktop */
 
 @media all and (min-width: 1280px) {
+
+    /*index*/
+    .navigation {
+        justify-content: flex-end;
+    }
+
+    article > img {
+        margin-top: -100px;
+    }
+
+    /* contact page */
+    
     .grid-container-cont {
         grid-template-columns: 4fr 4fr 2fr;
         grid-template-rows: 20vh 60vh 80vh;
@@ -754,4 +749,15 @@ form {
     div > section > p {
         padding-bottom: 6%;
     }
+}
+
+@media all and (min-width: 1920px) {
+
+    h1 {
+        font-size: 34px;
+    }
+    p {
+        font-size: 28px;
+    }
+
 }
