@@ -27,13 +27,12 @@ function contact() {
 
 
 function setField() {
-    document.getElementById('nieuwOnderwerp').style.display = "block";
-    document.getElementById('anderOnderwerp').required = true;
+    document.getElementById('anderOnderwerp').style.backgroundColor = "#FFF";
     document.getElementById('anderOnderwerp').readOnly = false;
 }
 
 function resetField() {
-    document.getElementById('nieuwOnderwerp').style.display = "none";
-    document.getElementById('anderOnderwerp').required = false;
+    document.getElementById('anderOnderwerp').style.backgroundColor = "#808080";
     document.getElementById('anderOnderwerp').readOnly = true;
+    document.getElementById('anderOnderwerp').value = '';
 }

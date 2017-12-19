@@ -4,6 +4,9 @@
 
 /*other*/
 
+/*form stuff */
+
+
 /* link transition */
 p > a {
    position: relative;
@@ -213,8 +216,8 @@ li > span {
     font-size: 28px;
 }
 
-ul li:first-child{
-    margin-right: 30vw;
+nav ul li:first-child{
+    margin-right: 5vw;
 }
 
 ul > div {
@@ -520,6 +523,10 @@ iframe {
 
 /*form*/
 
+textarea {
+    margin: 10px;
+}
+
 input[type=text],
 select,
 textarea {
@@ -536,8 +543,8 @@ textarea {
 /* Style the submit button with a specific background color etc */
 
 input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
+    background-color: hsl(44, 28%, 67%);
+    color: black;
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -547,11 +554,15 @@ input[type=submit] {
 /* When moving the mouse over the submit button, add a darker green color */
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: hsl(25, 40%, 50%);
 }
 
 #nieuwOnderwerp {
-    display: none;
+    display: block;
+}
+
+#anderOnderwerp {
+    background-color: #808080;
 }
 
 #map {
@@ -693,7 +704,7 @@ form {
         width: 100%;
         display: grid;
         grid-template-columns: 7fr 3fr;
-        grid-template-rows: 20vh 70vh 100vh;
+        grid-template-rows: 20vh 70vh 80vh;
         grid-template-areas: "intro intro" "map openingsuren" "formulier fb";
     }
 
@@ -724,6 +735,10 @@ form {
     .map {
         height: inherit;
     }
+    
+    nav ul li:first-child{
+    margin-right: 10vw;
+}
 
 }
 
@@ -774,6 +789,9 @@ form {
         left: auto;
         right: 0;
     }
+    nav ul li:first-child{
+    margin-right: 20vw;
+}
 }
 
 /* desktop */
@@ -793,7 +811,7 @@ form {
     
     .grid-container-cont {
         grid-template-columns: 4fr 4fr 2fr;
-        grid-template-rows: 20vh 60vh 80vh;
+        grid-template-rows: 20vh 60vh 130vh;
         grid-template-areas: "intro intro intro" "map openingsuren fb" "formulier formulier ."
     }
 
@@ -814,5 +832,8 @@ form {
     p {
         font-size: 28px;
     }
+    nav ul li:first-child{
+    margin-right: 30vw;
+}
 
 }
